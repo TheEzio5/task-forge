@@ -1,1 +1,1 @@
-WIDTH = 4
+WIDTH = 10

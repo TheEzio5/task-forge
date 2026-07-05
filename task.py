@@ -7,3 +7,5 @@ class Task:
         self.priority = priority
         self.completed = False
 
+    def __str__(self):
+        return f"{self.title} | {self.priority}"
