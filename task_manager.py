@@ -5,7 +5,7 @@ class TaskManager:
     def __init__(self):
         self.tasks = []
 
-    def add_task(self, task,):
+    def add_task(self, task):
         self.tasks.append(task)
 
     def view_tasks(self):
@@ -19,3 +19,8 @@ class TaskManager:
             print(f"Priority: {task.priority}")
             print(f"Completed: {task.completed}")
             print("-" * 20)
+
+    def complete_task(self,task_completed):
+        task = self.tasks[task_completed - 1]
+        task.completed = True
+        print("Task completed!")

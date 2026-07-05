@@ -22,9 +22,14 @@ while True:
         manager.add_task(task)
 
         print("Task added successfully!")
+
     elif main_menu == "2":
         manager.view_tasks()
     elif main_menu == "3":
+        task_number = int(input("Please enter task number: "))
+        manager.complete_task(task_number)
+
+    elif main_menu == "4":
         print("Bye Bye")
         break
     else:
