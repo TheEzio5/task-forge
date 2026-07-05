@@ -28,8 +28,11 @@ while True:
     elif main_menu == "3":
         task_number = int(input("Please enter task number: "))
         manager.complete_task(task_number)
-
     elif main_menu == "4":
+        task_number = int(input("Please enter task number: "))
+        manager.delete_task(task_number)
+
+    elif main_menu == "5":
         print("Bye Bye")
         break
     else:

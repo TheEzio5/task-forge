@@ -24,3 +24,8 @@ class TaskManager:
         task = self.tasks[task_completed - 1]
         task.completed = True
         print("Task completed!")
+
+    def delete_task(self,task_number):
+        self.tasks.pop(task_number-1)
+
+        print("Task deleted!")
