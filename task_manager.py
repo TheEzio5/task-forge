@@ -29,3 +29,17 @@ class TaskManager:
         self.tasks.pop(task_number-1)
 
         print("Task deleted!")
+
+    def search_tasks(self, search):
+        found = False
+        for number, task in enumerate(self.tasks):
+            if search.lower() in task.title.lower():
+                found = True
+                print(f"Task #{number + 1}")
+                print(f"Title: {task.title}")
+                print(f"Description: {task.description}")
+                print(f"Priority: {task.priority}")
+                print(f"Completed: {task.completed}")
+                print("-" * 20)
+        if not found:
+            print("No matching tasks found.")

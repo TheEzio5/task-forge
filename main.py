@@ -39,6 +39,10 @@ while True:
         manager.delete_task(task_number)
         save_task(manager)
     elif main_menu == "5":
+        search = input("Please enter task name: ").lower()
+
+
+    elif main_menu == "6":
         print("Bye Bye")
         break
     else:
