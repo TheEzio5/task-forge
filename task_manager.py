@@ -29,9 +29,10 @@ class TaskManager:
             print("Invalid task number.")
 
     def delete_task(self,task_number):
-        self.tasks.pop(task_number-1)
-
-        print("Task deleted!")
+        try:
+            self.tasks.pop(task_number-1)
+        except IndexError:
+            print("Task deleted!")
 
     def search_tasks(self, search):
         found = False
@@ -55,4 +56,21 @@ class TaskManager:
         task.description = description
         task.priority = priority
         print("Task edited!")
+
+    def filter_tasks(self, completed):
+        found = False
+
+        for number, task in enumerate(self.tasks):
+            if task.completed == completed:
+                found = True
+                print(f"Task #{number + 1}")
+                print(f"Title: {task.title}")
+                print(f"Description: {task.description}")
+                print(f"Priority: {task.priority}")
+                print(f"Completed: {task.completed}")
+                print("-" * 20)
+
+        if not found:
+            print("No matching tasks.")
+
 

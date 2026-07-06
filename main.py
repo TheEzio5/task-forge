@@ -1,6 +1,6 @@
 from task import Task
 from task_manager import TaskManager
-from menu import menu
+from menu import menu, filtered_menu
 from save import save_task, load_task
 
 manager = TaskManager()
@@ -65,8 +65,19 @@ while True:
         priority = input("Please enter new priority of the task: ")
         manager.edit_task(task_number, title, description, priority)
         save_task(manager)
-
     elif main_menu == "7":
+        filtered_menu()
+        filter_choice = input("Please enter your choice: ")
+        if filter_choice == "1":
+            manager.view_tasks()
+        elif filter_choice == "2":
+            manager.filter_tasks(True)
+        elif filter_choice == "3":
+            manager.filter_tasks(False)
+        elif filter_choice == "4":
+            continue
+
+    elif main_menu == "8":
 
         print("Bye Bye")
         break

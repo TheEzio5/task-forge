@@ -13,4 +13,15 @@ def menu():
     print("4. Delete task")
     print("5. Search tasks")
     print("6. Update task")
-    print("7. Exit")
+    print("7. Filter tasks")
+    print("8. Exit")
+
+def filtered_menu():
+    print("=" * WIDTH)
+    print("TASK FILTER".center(WIDTH))
+    print("=" * WIDTH)
+
+    print("1. Show all tasks")
+    print("2. Show completed tasks")
+    print("3. Show pending tasks")
+    print("4. Back")
