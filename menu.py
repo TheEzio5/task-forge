@@ -14,7 +14,8 @@ def menu():
     print("5. Search tasks")
     print("6. Update task")
     print("7. Filter tasks")
-    print("8. Exit")
+    print("8. Sort tasks")
+    print("9. Exit")
 
 def filtered_menu():
     print("=" * WIDTH)
@@ -25,3 +26,11 @@ def filtered_menu():
     print("2. Show completed tasks")
     print("3. Show pending tasks")
     print("4. Back")
+
+def sort_menu():
+    print("=" * WIDTH)
+    print("TASK SORT".center(WIDTH))
+    print("=" * WIDTH)
+    print("1. Priority (High → Medium → Low)")
+    print("2. Alphabetically (A-Z)")
+    print("3. Back")

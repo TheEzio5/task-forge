@@ -1,6 +1,6 @@
 from task import Task
 from task_manager import TaskManager
-from menu import menu, filtered_menu
+from menu import menu, filtered_menu, sort_menu
 from save import save_task, load_task
 
 manager = TaskManager()
@@ -78,6 +78,18 @@ while True:
             continue
 
     elif main_menu == "8":
+        sort_menu()
+        sort_choice = input("Please enter your choice: ")
+        if sort_choice == "1":
+            manager.sort_by_priority()
+            save_task(manager)
+        elif sort_choice == "2":
+            manager.sort_by_title()
+            save_task(manager)
+        elif sort_choice == "3":
+            continue
+
+    elif main_menu == "9":
 
         print("Bye Bye")
         break
