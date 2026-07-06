@@ -9,6 +9,14 @@ try:
 except FileNotFoundError:
     pass
 
+def get_task_number():
+    try:
+        task_number = int(input("Please enter task number: "))
+        return task_number
+    except ValueError:
+        print("Please enter a valid number")
+
+
 
 
 while True:
@@ -31,11 +39,15 @@ while True:
     elif main_menu == "2":
         manager.view_tasks()
     elif main_menu == "3":
-        task_number = int(input("Please enter task number: "))
+        task_number = get_task_number()
+        if task_number is None:
+            continue
         manager.complete_task(task_number)
         save_task(manager)
     elif main_menu == "4":
-        task_number = int(input("Please enter task number: "))
+        task_number = get_task_number()
+        if task_number is None:
+            continue
         manager.delete_task(task_number)
         save_task(manager)
     elif main_menu == "5":
@@ -45,7 +57,9 @@ while True:
 
     elif main_menu == "6":
 
-        task_number = int(input("Please enter task number: "))
+        task_number = get_task_number()
+        if task_number is None:
+            continue
         title = input("Please enter new name of the task: ")
         description = input("Please enter new description of the task: ")
         priority = input("Please enter new priority of the task: ")

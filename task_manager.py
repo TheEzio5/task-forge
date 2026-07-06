@@ -21,9 +21,12 @@ class TaskManager:
             print("-" * 20)
 
     def complete_task(self,task_completed):
-        task = self.tasks[task_completed - 1]
-        task.completed = True
-        print("Task completed!")
+        try:
+            task = self.tasks[task_completed - 1]
+            task.completed = True
+            print("Task completed!")
+        except IndexError:
+            print("Invalid task number.")
 
     def delete_task(self,task_number):
         self.tasks.pop(task_number-1)
