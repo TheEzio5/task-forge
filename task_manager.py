@@ -1,4 +1,4 @@
-from selectors import SelectSelector
+from constants import STATUS
 
 
 class TaskManager:
@@ -18,7 +18,7 @@ class TaskManager:
             print(f"Title: {task.title}")
             print(f"Description: {task.description}")
             print(f"Priority: {task.priority}")
-            print(f"Completed: {task.completed}")
+            print(f"Status: {STATUS[task.completed]}")
             print("-" * 20)
 
     def complete_task(self,task_completed):
@@ -31,9 +31,10 @@ class TaskManager:
 
     def delete_task(self,task_number):
         try:
-            self.tasks.pop(task_number-1)
-        except IndexError:
+            self.tasks.pop(task_number - 1)
             print("Task deleted!")
+        except IndexError:
+            print("Invalid task number.")
 
     def search_tasks(self, search):
         found = False
@@ -44,7 +45,7 @@ class TaskManager:
                 print(f"Title: {task.title}")
                 print(f"Description: {task.description}")
                 print(f"Priority: {task.priority}")
-                print(f"Completed: {task.completed}")
+                print(f"Status: {STATUS[task.completed]}")
                 print("-" * 20)
         if not found:
             print("No matching tasks found.")
@@ -68,7 +69,7 @@ class TaskManager:
                 print(f"Title: {task.title}")
                 print(f"Description: {task.description}")
                 print(f"Priority: {task.priority}")
-                print(f"Completed: {task.completed}")
+                print(f"Status: {STATUS[task.completed]}")
                 print("-" * 20)
 
         if not found:
