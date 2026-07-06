@@ -1,9 +1,9 @@
 [
     {
         "id": null,
-        "title": "Cleaner",
-        "description": "Cleans",
-        "priority": "Low",
+        "title": "Builder",
+        "description": "Building houses",
+        "priority": "Medium",
         "completed": false
     },
     {

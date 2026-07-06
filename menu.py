@@ -12,4 +12,5 @@ def menu():
     print("3. Complete task")
     print("4. Delete task")
     print("5. Search tasks")
-    print("6. Exit")
+    print("6. Update task")
+    print("7. Exit")

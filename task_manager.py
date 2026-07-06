@@ -43,3 +43,13 @@ class TaskManager:
                 print("-" * 20)
         if not found:
             print("No matching tasks found.")
+
+    def edit_task(self, task_number, title, description, priority):
+
+        task = self.tasks[task_number - 1]
+
+        task.title = title
+        task.description = description
+        task.priority = priority
+        print("Task edited!")
+

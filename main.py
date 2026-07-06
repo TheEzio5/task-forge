@@ -43,8 +43,17 @@ while True:
         print("I have found the following tasks: ")
         manager.search_tasks(search)
 
-
     elif main_menu == "6":
+
+        task_number = int(input("Please enter task number: "))
+        title = input("Please enter new name of the task: ")
+        description = input("Please enter new description of the task: ")
+        priority = input("Please enter new priority of the task: ")
+        manager.edit_task(task_number, title, description, priority)
+        save_task(manager)
+
+    elif main_menu == "7":
+
         print("Bye Bye")
         break
     else:
