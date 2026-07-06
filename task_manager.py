@@ -75,14 +75,6 @@ class TaskManager:
         if not found:
             print("No matching tasks.")
 
-    def sort_tasks(self):
-
-
-
-        self.tasks.sort(key=lambda task: task.priority)
-        print("Tasks sorted.")
-        print("-" * 20)
-
     def sort_by_priority(self):
         priority_order = {
             "High": 3,

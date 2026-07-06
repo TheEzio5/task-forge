@@ -1,13 +1,6 @@
 [
     {
         "id": null,
-        "title": "Programmer",
-        "description": "Codes code",
-        "priority": "High",
-        "completed": true
-    },
-    {
-        "id": null,
         "title": "Builder",
         "description": "Building houses",
         "priority": "Medium",
@@ -19,5 +12,12 @@
         "description": "Paint pics",
         "priority": "Medium",
         "completed": false
+    },
+    {
+        "id": null,
+        "title": "Programmer",
+        "description": "Codes code",
+        "priority": "High",
+        "completed": true
     }
 ]
